@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Club La Estrella de Perfiles y Metales La Estrella. Afiliate gratis, consultá tu saldo disponible y disfrutá beneficios exclusivos.">
+    <title>Club La Estrella | Perfiles y Metales La Estrella</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="rewards.css">
+
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="nav-shell" aria-label="Navegación Club La Estrella">
+            <a class="brand" href="index.html" aria-label="Perfiles y Metales La Estrella">
+                <h1>PERFILES Y METALES <span>LA ESTRELLA</span></h1>
+            </a>
+
+        <div class="main-menu">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="encuesta.html">Encuesta</a>
+            <a href="rewards.html" class="active">Recompensas</a>
+        </div>
+
+            <button class="mobile-menu-btn" type="button" aria-label="Abrir menu">
+                &#9776;
+            </button>
+
+            <nav class="mobile-dropdown" id="mobileDropdown">
+                <a href="mobile.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="encuesta.html">Encuesta</a>
+                <a href="rewards.html">Recompensas</a>
+                <a href="https://wa.me/50249593019" target="_blank">WhatsApp</a>
+            </nav>
+
+            <a class="whatsapp-link" href="https://wa.me/50249593019" target="_blank" rel="noopener">
+                WhatsApp 4959-3019
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-copy">
+                <p class="eyebrow">Club La Estrella</p>
+                <h1 class="rewards-page-title">Afiliate Gratis y Empezá a Ahorrar</h1>
+                <p class="hero-slogan">Comprá Más. Ahorrá Más.</p>
+                <p class="hero-text">
+                    Registrate con tu WhatsApp, consultá tu saldo disponible y recibí beneficios exclusivos en Perfiles y Metales La Estrella.
+                </p>
+                <div class="hero-actions">
+                    <a class="primary-button" href="#afiliacion">Afiliarme Gratis</a>
+                    <a class="secondary-button" href="#saldo">Consultar Saldo</a>
+                </div>
+            </div>
+
+            <aside class="saldo-card" aria-label="Ejemplo de saldo disponible">
+                <span>Tu Saldo Disponible</span>
+                <strong>Q125.00</strong>
+                <p>Disponible para descuento en futuras compras</p>
+            </aside>
+        </section>
+
+        <section class="forms-grid" id="afiliacion">
+            <form class="panel-form" id="clubForm">
+                <div class="section-heading">
+                    <p>Afiliación gratuita</p>
+                    <h2>Creá tu cuenta con WhatsApp</h2>
+                </div>
+
+                <label>
+                    Nombre completo
+                    <input name="nombre" type="text" autocomplete="name" required>
+                </label>
+
+                <label>
+                    WhatsApp
+                    <input name="telefono" type="tel" autocomplete="tel" inputmode="tel" required>
+                </label>
+
+                <label>
+                    Correo electronico
+                    <input name="email" type="email" autocomplete="email">
+                </label>
+
+                <label>
+                    Ciudad
+                    <input name="ciudad" type="text" value="Momostenango" required>
+                </label>
+
+                <label>
+                    Tipo de cliente
+                    <select name="tipo_cliente" required>
+                        <option value="">Seleccioná una opción</option>
+                        <option>Herrero</option>
+                        <option>Constructor</option>
+                        <option>Hogar</option>
+                        <option>Empresa</option>
+                    </select>
+                </label>
+
+                <label>
+                    Fecha de nacimiento
+                    <input name="fecha_nacimiento" type="date">
+                </label>
+
+                <button type="submit">Afiliarme Gratis</button>
+                <div class="form-message" id="clubSuccess" aria-live="polite"></div>
+            </form>
+
+            <section class="welcome-panel is-hidden" id="welcomePanel" aria-live="polite">
+                <div class="section-heading">
+                    <p>Cuenta creada</p>
+                    <h2>Bienvenido al Club La Estrella</h2>
+                </div>
+
+                <dl class="welcome-data">
+                    <div>
+                        <dt>Nombre del cliente</dt>
+                        <dd id="welcomeName">-</dd>
+                    </div>
+                    <div>
+                        <dt>WhatsApp</dt>
+                        <dd id="welcomePhone">-</dd>
+                    </div>
+                    <div>
+                        <dt>Tipo de cliente</dt>
+                        <dd id="welcomeType">-</dd>
+                    </div>
+                    <div>
+                        <dt>Ciudad</dt>
+                        <dd id="welcomeCity">-</dd>
+                    </div>
+                </dl>
+
+                <div class="welcome-balance">
+                    <span>Tu Saldo Disponible:</span>
+                    <strong id="welcomeBalance">Q5.00</strong>
+                    <p>Te regalamos Q5.00 de bienvenida para empezar a ahorrar en tus próximas compras.</p>
+                </div>
+
+                <button class="welcome-button" id="viewBalanceButton" type="button">Ver mi saldo</button>
+            </section>
+
+            <form class="panel-form balance-panel" id="saldoForm">
+                <div class="section-heading">
+                    <p>Consulta rápida</p>
+                    <h2>Tu Saldo Disponible</h2>
+                </div>
+
+                <label>
+                    WhatsApp
+                    <input name="telefono" type="tel" autocomplete="tel" inputmode="tel" required>
+                </label>
+
+                <button type="submit">Consultar Saldo</button>
+                <div class="saldo-result" id="saldoResult" aria-live="polite"></div>
+            </form>
+        </section>
+
+        <section class="benefits-section" id="beneficios">
+            <div class="section-heading centered">
+                <p>Beneficios de Afiliarte</p>
+                <h2>Más valor en cada visita</h2>
+            </div>
+
+            <div class="benefits-grid">
+                <article>
+                    <span>Q</span>
+                    <h3>Saldo acumulado en cada compra</h3>
+                    <p>Acumulá saldo y usalo como descuento en tus próximas visitas.</p>
+                </article>
+                <article>
+                    <span>%</span>
+                    <h3>Promociones exclusivas</h3>
+                    <p>Recibí ofertas especiales para miembros del Club La Estrella antes que todos.</p>
+                </article>
+                <article>
+                    <span>+</span>
+                    <h3>Ahorro en tus proyectos</h3>
+                    <p>Comprá lámina, tubo, costanera y materiales para construcción mientras acumulás beneficios.</p>
+                </article>
+                <article>
+                    <span>WA</span>
+                    <h3>Atención preferencial por WhatsApp</h3>
+                    <p>Recibí información de productos, ofertas y beneficios directamente en tu teléfono.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="value-strip" aria-label="Ejemplo informativo de saldo acumulado">
+            <div>
+                <p class="eyebrow">Ahorro Acumulado</p>
+                <h2>Tu compra ahora vale más</h2>
+                <p>Cada vez que comprás en Perfiles y Metales La Estrella, acumulás saldo disponible para ahorrar en futuras compras.</p>
+            </div>
+            <strong>Compra Q1,000 → Recibís Q10 de saldo acumulado</strong>
+        </section>
+
+        <section class="steps-section" id="como-funciona">
+            <div class="section-heading centered">
+                <p>Cómo funciona</p>
+                <h2>Simple para comprar mejor</h2>
+            </div>
+
+            <div class="steps-grid">
+                <article>
+                    <span>1</span>
+                    <h3>Comprás</h3>
+                    <p>Comprá tus materiales normalmente en Perfiles y Metales La Estrella.</p>
+                </article>
+                <article>
+                    <span>2</span>
+                    <h3>Acumulás saldo</h3>
+                    <p>Tu compra suma saldo disponible en tu cuenta Club La Estrella.</p>
+                </article>
+                <article>
+                    <span>3</span>
+                    <h3>Ahorrás en futuras compras</h3>
+                    <p>Usá tu saldo acumulado como descuento cuando regresés.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="bobby-section">
+            <div>
+                <p class="eyebrow">Bobby</p>
+                <h2>Preguntale a Bobby por productos, promociones y saldo disponible</h2>
+                <p>Te ayudamos con medidas, disponibilidad, ofertas y dudas sobre Club La Estrella.</p>
+            </div>
+            <a class="primary-button" href="https://wa.me/50249593019" target="_blank" rel="noopener">
+                Hablar con Bobby
+            </a>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contacto">
+        <div>
+            <a class="brand" href="index.html">
+                <span>Perfiles y Metales</span>
+                <strong>La Estrella</strong>
+            </a>
+            <p>Material confiable, precios competitivos y stock inmediato.</p>
+        </div>
+
+        <address>
+            01 Avenida, Zona 4, camino que va a La Loma<br>
+            Momostenango, Totonicapán, Guatemala<br>
+            Referencia: A 300 metros de la Iglesia Mormona de Momostenango.
+        </address>
+
+        <a href="https://wa.me/50249593019" target="_blank" rel="noopener">
+            WhatsApp 4959-3019
+        </a>
+    </footer>
+
+    <script>
+        const API_BASE_URL = "https://perfiles-y-metales-xela-backend.onrender.com";
+        const clubForm = document.querySelector("#clubForm");
+        const clubMessage = document.querySelector("#clubSuccess");
+        const welcomePanel = document.querySelector("#welcomePanel");
+        const welcomeName = document.querySelector("#welcomeName");
+        const welcomePhone = document.querySelector("#welcomePhone");
+        const welcomeType = document.querySelector("#welcomeType");
+        const welcomeCity = document.querySelector("#welcomeCity");
+        const welcomeBalance = document.querySelector("#welcomeBalance");
+
+        function setMessage(element, message, isError = false) {
+            if (!element) return;
+
+            element.textContent = message;
+            element.classList.toggle("is-error", isError);
+        }
+
+        function formatCurrency(value) {
+            const amount = Number(value || 0);
+            return `Q${amount.toFixed(2)}`;
+        }
+
+        async function parseJsonResponse(response) {
+            const data = await response.json();
+
+            if (!response.ok || data.ok === false) {
+                throw new Error(data.error || data.message || "No se pudo completar la solicitud.");
+            }
+
+            return data;
+        }
+
+        if (clubForm) {
+            clubForm.addEventListener("submit", async (event) => {
+                event.preventDefault();
+
+                if (!clubForm.checkValidity()) {
+                    clubForm.reportValidity();
+                    return;
+                }
+
+                const formData = new FormData(clubForm);
+                const payload = {
+                    nombre: formData.get("nombre") || "",
+                    telefono: formData.get("telefono") || "",
+                    email: formData.get("email") || "",
+                    ciudad: formData.get("ciudad") || "",
+                    tipo_cliente: formData.get("tipo_cliente") || "",
+                    fecha_nacimiento: formData.get("fecha_nacimiento") || "",
+                    source: "rewards.html",
+                };
+
+                try {
+                    setMessage(clubMessage, "Guardando afiliacion...");
+
+                    await parseJsonResponse(await fetch(`${API_BASE_URL}/api/rewards/enroll`, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(payload),
+                    }));
+
+                    setMessage(clubMessage, "Afiliacion guardada correctamente.");
+
+                    if (welcomePanel) {
+                        welcomePanel.classList.remove("is-hidden");
+                    }
+
+                    if (welcomeName) welcomeName.textContent = payload.nombre || "-";
+                    if (welcomePhone) welcomePhone.textContent = payload.telefono || "-";
+                    if (welcomeType) welcomeType.textContent = payload.tipo_cliente || "-";
+                    if (welcomeCity) welcomeCity.textContent = payload.ciudad || "-";
+                    if (welcomeBalance) welcomeBalance.textContent = formatCurrency(5);
+
+                    clubForm.reset();
+                } catch (error) {
+                    setMessage(clubMessage, error.message || "No se pudo guardar la afiliacion.", true);
+                    alert(error.message || "No se pudo guardar la afiliacion.");
+                }
+            });
+        }
+
+        const mobileMenuButton = document.querySelector(".mobile-menu-btn");
+        const mobileDropdown = document.querySelector("#mobileDropdown");
+
+        if (mobileMenuButton && mobileDropdown) {
+            mobileMenuButton.addEventListener("click", () => {
+                mobileDropdown.classList.toggle("is-open");
+            });
+        }
+    </script>
+</body>
+
+</html>
